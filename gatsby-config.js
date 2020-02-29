@@ -1,10 +1,16 @@
 require(`dotenv`).config({
-  path: `.env`,
-})
+  path: `.env`
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `개발하는 기획자의 insight silo`,
+    siteTitleAlt: `fullyalive blog`,
+    siteHeadline: `Insight Silo - @fullyalive`,
+    siteLanguage: `ko`,
+    siteDescription: `기획자가 개발과 디자인을 공부하는 이유와 그 과정에서 얻은 인사이트를 공유합니다.`,
+    author: `@fullyalive`,
+    siteImage: `/banner.jpg`
   },
   plugins: [
     {
@@ -12,59 +18,63 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `About`,
+            slug: `/fullyalive`
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `블로그`,
+            slug: `/blog`
           },
+          {
+            title: `기획이야기`,
+            slug: `/project-management`
+          },
+          {
+            title: `개발이야기`,
+            slug: `/development`
+          }
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
-        ],
-      },
+            name: `github`,
+            url: `https://github.com/fullyalive`
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `개발하는 기획자의 insight silo`,
+        short_name: `fullyalive-blog`,
+        description: `기획자가 개발과 디자인을 공부하는 이유와 그 과정에서 얻은 인사이트를 공유합니다.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/android-icon-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
-            src: `/android-chrome-512x512.png`,
+            src: `/android-icon-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+            type: `image/png`
+          }
+        ]
+      }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify`
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ],
-}
+  ]
+};
