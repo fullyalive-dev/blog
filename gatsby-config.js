@@ -22,17 +22,13 @@ module.exports = {
             slug: `/fullyalive`
           },
           {
-            title: `블로그`,
+            title: `Blog`,
             slug: `/blog`
           },
           {
-            title: `기획이야기`,
-            slug: `/project-management`
+            title: `Index`,
+            slug: `/blog-index`
           },
-          {
-            title: `개발이야기`,
-            slug: `/development`
-          }
         ],
         externalLinks: [
           {
