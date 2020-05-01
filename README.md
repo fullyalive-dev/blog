@@ -1,5 +1,6 @@
 # **개발하는 기획자의 insight silo**
 
+[홈페이지](https://practical-mcclintock-f03a61.netlify.app/)
 ![](static/banner.jpg)
 
 `Hands On Business Guy` [@Banksalad](https://career.banksalad.com/)
