@@ -10,7 +10,7 @@ module.exports = {
     siteLanguage: `ko`,
     siteDescription: `기획자가 개발과 디자인을 공부하는 이유와 그 과정에서 얻은 인사이트를 공유합니다.`,
     author: `@fullyalive`,
-    siteImage: `/banner.jpg`
+    siteImage: `/banner.jpg`,
   },
   plugins: [
     {
@@ -18,31 +18,31 @@ module.exports = {
       options: {
         navigation: [
           {
+            title: `Home`,
+            slug: `/`,
+          },
+          {
             title: `About`,
-            slug: `/fullyalive`
+            slug: `/fullyalive`,
           },
           {
             title: `Blog`,
-            slug: `/blog`
-          },
-          {
-            title: `Index`,
-            slug: `/blog-index`
+            slug: `/blog`,
           },
         ],
         externalLinks: [
           {
             name: `github`,
-            url: `https://github.com/fullyalive`
-          }
-        ]
-      }
+            url: `https://github.com/fullyalive`,
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
-      }
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      },
     },
     `gatsby-plugin-sitemap`,
     {
@@ -59,18 +59,18 @@ module.exports = {
           {
             src: `/android-icon-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`
+            type: `image/png`,
           },
           {
             src: `/android-icon-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`
-          }
-        ]
-      }
+            type: `image/png`,
+          },
+        ],
+      },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ]
+  ],
 };
